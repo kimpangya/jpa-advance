@@ -18,7 +18,7 @@ public class Food {
     private String name;
     private double price;
 
-    @OneToMany
-    @JoinColumn(name = "food_id") // users 테이블에 food_id 컬럼
-    private List<User> userList = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
 }
